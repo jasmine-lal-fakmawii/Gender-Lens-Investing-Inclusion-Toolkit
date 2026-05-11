@@ -1,97 +1,130 @@
-
-<h2 class="sr-only">Gender-Lens and Social Inclusion Investing Toolkit for SME Loan Officers and Investment Teams</h2>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gender-Lens & Social Inclusion Investing Toolkit</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font-sans);color:var(--color-text-primary)}
-.wrap{padding:1.5rem 0}
-.hero{background:var(--color-background-secondary);border-radius:var(--border-radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.5rem;border:0.5px solid var(--color-border-tertiary)}
-.hero-top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
-.badge{font-size:11px;padding:3px 8px;border-radius:var(--border-radius-md);font-weight:500}
-.badge-purple{background:#EEEDFE;color:#3C3489}
-.badge-teal{background:#E1F5EE;color:#085041}
-.badge-amber{background:#FAEEDA;color:#633806}
-.badge-coral{background:#FAECE7;color:#712B13}
-.badge-blue{background:#E6F1FB;color:#0C447C}
-.badge-green{background:#EAF3DE;color:#27500A}
-.nav-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:1.5rem;border-bottom:0.5px solid var(--color-border-tertiary);padding-bottom:4px}
-.tab-btn{font-size:13px;padding:6px 12px;border-radius:var(--border-radius-md);border:0.5px solid transparent;cursor:pointer;background:transparent;color:var(--color-text-secondary);display:flex;align-items:center;gap:5px;white-space:nowrap}
-.tab-btn.active{background:var(--color-background-secondary);border-color:var(--color-border-secondary);color:var(--color-text-primary);font-weight:500}
-.tab-btn:hover:not(.active){background:var(--color-background-secondary)}
+body{font-family:system-ui,-apple-system,sans-serif;color:#1a1a2e;background:#f0eefa;min-height:100vh}
+.page-wrap{max-width:1100px;margin:0 auto;padding:2.5rem 2rem 3rem}
+
+.hero{background:#fff;border-radius:14px;padding:1.5rem 1.75rem;margin-bottom:2rem;border:1px solid #d6ccf5;box-shadow:0 1px 4px rgba(83,74,183,0.07)}
+.hero-top{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.hero-title{font-size:18px;font-weight:700;color:#26215C}
+.hero-sub{font-size:13px;color:#6b6b8a;margin-top:2px}
+.badge{font-size:11px;padding:3px 9px;border-radius:100px;font-weight:600;letter-spacing:.2px}
+.badge-purple{background:#EEEDFE;color:#3C3489;border:1px solid #AFA9EC}
+.badge-teal{background:#E1F5EE;color:#085041;border:1px solid #5DCAA5}
+.badge-amber{background:#FAEEDA;color:#633806;border:1px solid #EF9F27}
+.badge-coral{background:#FAECE7;color:#712B13;border:1px solid #F0997B}
+.badge-blue{background:#E6F1FB;color:#0C447C;border:1px solid #85B7EB}
+.badge-green{background:#EAF3DE;color:#27500A;border:1px solid #97C459}
+
+.nav-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+.tab-btn{font-size:13px;font-weight:600;padding:8px 14px;border-radius:8px;border:1.5px solid #c4b8f0;cursor:pointer;background:#fff;color:#534AB7;display:flex;align-items:center;gap:6px;white-space:nowrap;transition:all .15s}
+.tab-btn.active{background:#534AB7;border-color:#534AB7;color:#fff;box-shadow:0 2px 8px rgba(83,74,183,0.18)}
+.tab-btn:hover:not(.active){background:#EEEDFE;border-color:#7F77DD;color:#3C3489}
+
 .section{display:none}
 .section.active{display:block}
-.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:1rem}
-.card-header{display:flex;align-items:center;gap:8px;margin-bottom:.75rem}
-.card-title{font-size:15px;font-weight:500}
-.card-sub{font-size:13px;color:var(--color-text-secondary);margin-top:2px}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem}
-.metric-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1rem;text-align:center}
-.metric-val{font-size:22px;font-weight:500;margin-bottom:4px}
-.metric-label{font-size:12px;color:var(--color-text-secondary)}
+
+.card{background:#fff;border:1px solid #d6ccf5;border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:0 1px 3px rgba(83,74,183,0.05)}
+.card-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid #ede8fb}
+.card-title{font-size:15px;font-weight:700;color:#26215C}
+.card-sub{font-size:12px;color:#8a84b8;margin-top:2px;font-weight:400}
+
+.section-intro{font-size:14px;color:#4a4a6a;line-height:1.75;margin-bottom:1.5rem;padding:1rem 1.25rem;background:#fff;border-radius:10px;border-left:4px solid #7F77DD;border:1px solid #d6ccf5}
+
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.metric-card{background:#EEEDFE;border-radius:12px;padding:1.1rem;text-align:center;border:1px solid #AFA9EC}
+.metric-val{font-size:26px;font-weight:700;margin-bottom:4px}
+.metric-label{font-size:12px;color:#534AB7;font-weight:500}
+
 .checklist{list-style:none;padding:0}
-.checklist li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:0.5px solid var(--color-border-tertiary);font-size:14px;line-height:1.5}
+.checklist li{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid #ede8fb;font-size:14px;line-height:1.55}
 .checklist li:last-child{border-bottom:none}
-.chk{width:18px;height:18px;border:0.5px solid var(--color-border-secondary);border-radius:4px;cursor:pointer;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;background:var(--color-background-primary)}
+.chk{width:20px;height:20px;border:1.5px solid #AFA9EC;border-radius:5px;cursor:pointer;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;background:#fff}
 .chk.done{background:#E1F5EE;border-color:#1D9E75}
-.chk.done::after{content:'✓';font-size:11px;color:#085041;font-weight:500}
-.pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.pill{font-size:12px;padding:3px 10px;border-radius:100px;border:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary);cursor:pointer;background:var(--color-background-primary)}
-.pill.active{background:#EEEDFE;border-color:#AFA9EC;color:#3C3489}
-.score-bar-wrap{margin:6px 0}
-.score-bar{height:8px;border-radius:4px;background:var(--color-border-tertiary);overflow:hidden}
-.score-fill{height:100%;border-radius:4px;transition:width .4s}
-.score-label{display:flex;justify-content:space-between;font-size:12px;color:var(--color-text-secondary);margin-bottom:3px}
-.accordion-btn{width:100%;text-align:left;background:transparent;border:none;border-bottom:0.5px solid var(--color-border-tertiary);padding:10px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:500;color:var(--color-text-primary)}
-.accordion-body{display:none;padding:10px 0 6px;font-size:13px;color:var(--color-text-secondary);line-height:1.7}
+.chk.done::after{content:'✓';font-size:12px;color:#085041;font-weight:700}
+
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;margin-bottom:4px}
+.pill{font-size:13px;padding:5px 14px;border-radius:100px;border:1.5px solid #c4b8f0;color:#534AB7;cursor:pointer;background:#fff;font-weight:500;transition:all .15s}
+.pill.active{background:#534AB7;border-color:#534AB7;color:#fff;font-weight:600}
+.pill:hover:not(.active){background:#EEEDFE}
+
+.score-bar{height:10px;border-radius:5px;background:#e8e2f8;overflow:hidden;margin:6px 0}
+.score-fill{height:100%;border-radius:5px;transition:width .4s}
+
+.accordion-btn{width:100%;text-align:left;background:#f7f4fe;border:1px solid #d6ccf5;border-radius:8px;padding:11px 14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:700;color:#26215C;margin-bottom:4px}
+.accordion-btn:hover{background:#EEEDFE}
+.accordion-body{display:none;padding:12px 14px 8px;font-size:13.5px;color:#3a3a5a;line-height:1.75;background:#fdfcff;border:1px solid #d6ccf5;border-radius:0 0 8px 8px;margin-bottom:8px}
 .accordion-body.open{display:block}
-.framework-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:0.5px solid var(--color-border-tertiary);font-size:13px}
+
+.framework-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid #ede8fb;font-size:14px;line-height:1.6}
 .framework-row:last-child{border-bottom:none}
-.tag-icon{width:32px;height:32px;border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
-.radio-group{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
-.radio-opt{padding:5px 12px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);cursor:pointer;font-size:13px;background:var(--color-background-primary);color:var(--color-text-secondary)}
-.radio-opt.sel{background:#EEEDFE;border-color:#AFA9EC;color:#3C3489;font-weight:500}
-.alert{border-radius:var(--border-radius-md);padding:.75rem 1rem;font-size:13px;margin:8px 0;border-left:3px solid;line-height:1.6}
+.tag-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+
+.radio-group{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.radio-opt{padding:6px 14px;border:1.5px solid #c4b8f0;border-radius:100px;cursor:pointer;font-size:13px;background:#fff;color:#534AB7;font-weight:500;transition:all .15s}
+.radio-opt:hover{background:#EEEDFE}
+.radio-opt.sel{background:#534AB7;border-color:#534AB7;color:#fff;font-weight:600}
+
+.alert{border-radius:9px;padding:.8rem 1rem;font-size:13.5px;margin:8px 0;border-left:4px solid;line-height:1.65}
 .alert-teal{background:#E1F5EE;border-color:#1D9E75;color:#085041}
 .alert-amber{background:#FAEEDA;border-color:#BA7517;color:#633806}
 .alert-coral{background:#FAECE7;border-color:#993C1D;color:#712B13}
 .alert-blue{background:#E6F1FB;border-color:#185FA5;color:#0C447C}
-.progress-steps{display:flex;gap:0;margin-bottom:1.5rem;overflow-x:auto}
-.step-item{display:flex;flex-direction:column;align-items:center;flex:1;min-width:60px;cursor:pointer}
-.step-circle{width:32px;height:32px;border-radius:50%;border:0.5px solid var(--color-border-secondary);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;background:var(--color-background-primary);color:var(--color-text-secondary);position:relative;z-index:1}
-.step-circle.done-s{background:#E1F5EE;border-color:#1D9E75;color:#085041}
-.step-circle.active-s{background:#EEEDFE;border-color:#7F77DD;color:#3C3489}
-.step-label{font-size:11px;color:var(--color-text-secondary);margin-top:4px;text-align:center;line-height:1.3}
-.step-line{flex:1;height:1px;background:var(--color-border-tertiary);margin-top:16px;min-width:12px}
-.range-row{display:flex;align-items:center;gap:12px;margin:6px 0}
-.range-row label{font-size:13px;color:var(--color-text-secondary);min-width:120px}
-.range-row input{flex:1}
-.range-val{font-size:13px;font-weight:500;min-width:40px;text-align:right}
-table.data-tbl{width:100%;font-size:13px;border-collapse:collapse}
-table.data-tbl th{font-weight:500;font-size:12px;color:var(--color-text-secondary);text-align:left;padding:6px 8px;border-bottom:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary)}
-table.data-tbl td{padding:7px 8px;border-bottom:0.5px solid var(--color-border-tertiary);vertical-align:top;line-height:1.5}
-table.data-tbl tr:last-child td{border-bottom:none}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-@media(max-width:520px){.two-col{grid-template-columns:1fr}.progress-steps{gap:2px}}
-.icon-wrap{width:36px;height:36px;border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
-.bg-purple{background:#EEEDFE}.bg-teal{background:#E1F5EE}.bg-amber{background:#FAEEDA}.bg-coral{background:#FAECE7}.bg-blue{background:#E6F1FB}.bg-green{background:#EAF3DE}.bg-gray{background:#F1EFE8}
-.section-intro{font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:1.25rem;padding:.75rem 1rem;background:var(--color-background-secondary);border-radius:var(--border-radius-md)}
-</style>
 
-<div class="wrap">
+.progress-steps{display:flex;gap:0;margin-bottom:1.5rem;overflow-x:auto;padding-bottom:4px}
+.step-item{display:flex;flex-direction:column;align-items:center;flex:1;min-width:70px;cursor:pointer}
+.step-circle{width:34px;height:34px;border-radius:50%;border:2px solid #c4b8f0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;background:#fff;color:#8a84b8;position:relative;z-index:1}
+.step-circle.done-s{background:#E1F5EE;border-color:#1D9E75;color:#085041}
+.step-circle.active-s{background:#534AB7;border-color:#534AB7;color:#fff}
+.step-label{font-size:11px;color:#8a84b8;margin-top:5px;text-align:center;line-height:1.3;font-weight:500}
+.step-line{flex:1;height:2px;background:#d6ccf5;margin-top:17px;min-width:12px}
+
+.range-row{display:flex;align-items:center;gap:14px;margin:8px 0}
+.range-row label{font-size:13px;color:#6b6b8a;min-width:140px;font-weight:500}
+.range-row input{flex:1;accent-color:#534AB7}
+.range-val{font-size:14px;font-weight:700;color:#26215C;min-width:50px;text-align:right}
+
+table.data-tbl{width:100%;font-size:13.5px;border-collapse:collapse;border-radius:10px;overflow:hidden}
+table.data-tbl th{font-weight:700;font-size:12px;color:#534AB7;text-align:left;padding:9px 10px;border-bottom:2px solid #d6ccf5;background:#f0eefa;text-transform:uppercase;letter-spacing:.4px}
+table.data-tbl td{padding:9px 10px;border-bottom:1px solid #ede8fb;vertical-align:top;line-height:1.55}
+table.data-tbl tr:last-child td{border-bottom:none}
+table.data-tbl tr:hover td{background:#fdfcff}
+
+.icon-wrap{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bg-purple{background:#EEEDFE}.bg-teal{background:#E1F5EE}.bg-amber{background:#FAEEDA}.bg-coral{background:#FAECE7}.bg-blue{background:#E6F1FB}.bg-green{background:#EAF3DE}.bg-gray{background:#F1EFE8}
+
+.sub-heading{font-size:14px;font-weight:700;color:#26215C;margin-bottom:8px;padding-bottom:4px;border-bottom:2px solid #EEEDFE}
+.dim-label{font-size:13px;font-weight:700;color:#3C3489;margin-bottom:7px;padding:6px 10px;background:#EEEDFE;border-radius:7px;border-left:3px solid #534AB7}
+
+@media(max-width:600px){.progress-steps{gap:2px}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+<h2 style="position:absolute;left:-9999px">Gender-Lens and Social Inclusion Investing Toolkit for SME Loan Officers and Investment Teams</h2>
+
 <div class="hero">
   <div class="hero-top">
-    <div class="icon-wrap bg-purple"><i class="ti ti-perspective" style="font-size:20px;color:#534AB7" aria-hidden="true"></i></div>
+    <div class="icon-wrap bg-purple"><i class="ti ti-perspective" style="font-size:22px;color:#534AB7" aria-hidden="true"></i></div>
     <div>
-      <div style="font-size:16px;font-weight:500">Gender-lens &amp; social inclusion investing toolkit</div>
-      <div style="font-size:12px;color:var(--color-text-secondary)">For SME loan officers and investment teams · Emerging &amp; crisis-affected markets</div>
+      <div class="hero-title">Gender-lens &amp; social inclusion investing toolkit</div>
+      <div class="hero-sub">For SME loan officers and investment teams · Emerging &amp; crisis-affected markets</div>
     </div>
   </div>
-  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+  <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:10px">
     <span class="badge badge-purple">GIIN / IRIS+</span>
     <span class="badge badge-teal">IFC Gender Framework</span>
     <span class="badge badge-amber">2X Challenge</span>
-    <span class="badge badge-blue">UN Women Empower</span>
+    <span class="badge badge-blue">UN Women WEP</span>
     <span class="badge badge-coral">DEI+ Social Inclusion</span>
     <span class="badge badge-green">Crisis-context adapted</span>
   </div>
@@ -108,41 +141,42 @@ table.data-tbl tr:last-child td{border-bottom:none}
   <button class="tab-btn" onclick="showTab('crisis')" data-tab="crisis"><i class="ti ti-alert-triangle" aria-hidden="true"></i> Crisis lens</button>
 </div>
 
+<!-- OVERVIEW -->
 <div id="tab-overview" class="section active">
   <div class="section-intro">This toolkit guides you through every stage of a gender-lens and social inclusion investment or lending cycle. Navigate the tabs above to move through each phase. Use the scoring tool to appraise individual enterprises.</div>
-  <div class="grid3">
-    <div class="metric-card"><div class="metric-val" style="color:#534AB7">8</div><div class="metric-label">workflow stages</div></div>
-    <div class="metric-card"><div class="metric-val" style="color:#0F6E56">4</div><div class="metric-label">global frameworks</div></div>
+  <div class="grid3" style="margin-bottom:1.25rem">
+    <div class="metric-card"><div class="metric-val" style="color:#534AB7">8</div><div class="metric-label">Workflow stages</div></div>
+    <div class="metric-card"><div class="metric-val" style="color:#0F6E56">4</div><div class="metric-label">Global frameworks</div></div>
     <div class="metric-card"><div class="metric-val" style="color:#BA7517">60+</div><div class="metric-label">IRIS+ aligned metrics</div></div>
-    <div class="metric-card"><div class="metric-val" style="color:#993C1D">3</div><div class="metric-label">inclusion dimensions</div></div>
+    <div class="metric-card"><div class="metric-val" style="color:#993C1D">3</div><div class="metric-label">Inclusion dimensions</div></div>
   </div>
 
-  <div class="card" style="margin-top:1rem">
+  <div class="card">
     <div class="card-header">
-      <div class="icon-wrap bg-teal"><i class="ti ti-stack-2" aria-hidden="true" style="color:#0F6E56;font-size:18px"></i></div>
+      <div class="icon-wrap bg-teal"><i class="ti ti-stack-2" aria-hidden="true" style="color:#0F6E56;font-size:20px"></i></div>
       <div><div class="card-title">Framework integration map</div><div class="card-sub">How the four frameworks work together in this toolkit</div></div>
     </div>
     <div class="framework-row">
-      <div class="tag-icon bg-purple"><i class="ti ti-leaf" aria-hidden="true" style="color:#534AB7"></i></div>
-      <div><strong style="font-size:13px">GIIN / IRIS+</strong> — Provides the impact measurement architecture: standardised indicators for gender and social inclusion outcomes, data collection protocols, and IMM (impact measurement &amp; management) workflows used throughout appraisal and portfolio management.</div>
+      <div class="tag-icon bg-purple"><i class="ti ti-leaf" aria-hidden="true" style="color:#534AB7;font-size:18px"></i></div>
+      <div><div class="sub-heading">GIIN / IRIS+</div>Provides the impact measurement architecture: standardised indicators for gender and social inclusion outcomes, data collection protocols, and IMM (impact measurement &amp; management) workflows used throughout appraisal and portfolio management.</div>
     </div>
     <div class="framework-row">
-      <div class="tag-icon bg-teal"><i class="ti ti-building-bank" aria-hidden="true" style="color:#0F6E56"></i></div>
-      <div><strong style="font-size:13px">IFC gender framework</strong> — Supplies the financial institution perspective: how to embed gender considerations in credit policy, product design, risk assessment, collateral flexibility, and client relationship management.</div>
+      <div class="tag-icon bg-teal"><i class="ti ti-building-bank" aria-hidden="true" style="color:#0F6E56;font-size:18px"></i></div>
+      <div><div class="sub-heading">IFC gender framework</div>Supplies the financial institution perspective: how to embed gender considerations in credit policy, product design, risk assessment, collateral flexibility, and client relationship management.</div>
     </div>
     <div class="framework-row">
-      <div class="tag-icon bg-amber"><i class="ti ti-award" aria-hidden="true" style="color:#854F0B"></i></div>
-      <div><strong style="font-size:13px">2X Challenge criteria</strong> — Sets the threshold standards for "gender-smart" classification across five pillars: Entrepreneurship, Leadership, Employment, Consumption, and Investment. Used as a qualification filter and portfolio benchmark.</div>
+      <div class="tag-icon bg-amber"><i class="ti ti-award" aria-hidden="true" style="color:#854F0B;font-size:18px"></i></div>
+      <div><div class="sub-heading">2X Challenge criteria</div>Sets the threshold standards for "gender-smart" classification across five pillars: Entrepreneurship, Leadership, Employment, Consumption, and Investment. Used as a qualification filter and portfolio benchmark.</div>
     </div>
     <div class="framework-row">
-      <div class="tag-icon bg-coral"><i class="ti ti-users" aria-hidden="true" style="color:#993C1D"></i></div>
-      <div><strong style="font-size:13px">Social inclusion &amp; DEI lens</strong> — Extends beyond gender to ethnicity, disability, displacement, informality, and intersectional vulnerability — critical for crisis-affected and fragile market contexts.</div>
+      <div class="tag-icon bg-coral"><i class="ti ti-users" aria-hidden="true" style="color:#993C1D;font-size:18px"></i></div>
+      <div><div class="sub-heading">Social inclusion &amp; DEI lens</div>Extends beyond gender to ethnicity, disability, displacement, informality, and intersectional vulnerability — critical for crisis-affected and fragile market contexts.</div>
     </div>
   </div>
 
   <div class="card">
     <div class="card-header">
-      <div class="icon-wrap bg-blue"><i class="ti ti-route" aria-hidden="true" style="color:#185FA5"></i></div>
+      <div class="icon-wrap bg-blue"><i class="ti ti-route" aria-hidden="true" style="color:#185FA5;font-size:20px"></i></div>
       <div><div class="card-title">Full investment lifecycle</div><div class="card-sub">Click any step to jump to that section</div></div>
     </div>
     <div class="progress-steps">
@@ -163,14 +197,14 @@ table.data-tbl tr:last-child td{border-bottom:none}
   </div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-green"><i class="ti ti-target" aria-hidden="true" style="color:#3B6D11;font-size:18px"></i></div><div class="card-title">Who counts as "target client"?</div></div>
-    <div class="alert alert-teal" style="margin-bottom:8px">This toolkit uses an <strong>intersectional definition</strong>. Gender alone is not sufficient — context, formality, and compounding vulnerability matter.</div>
+    <div class="card-header"><div class="icon-wrap bg-green"><i class="ti ti-target" aria-hidden="true" style="color:#3B6D11;font-size:20px"></i></div><div class="card-title">Who counts as "target client"?</div></div>
+    <div class="alert alert-teal" style="margin-bottom:12px">This toolkit uses an <strong>intersectional definition</strong>. Gender alone is not sufficient — context, formality, and compounding vulnerability matter.</div>
     <table class="data-tbl">
       <thead><tr><th>Dimension</th><th>Threshold / indicator</th><th>2X / IRIS+ alignment</th></tr></thead>
       <tbody>
         <tr><td><strong>Women entrepreneurship</strong></td><td>≥51% women ownership OR sole female proprietor</td><td>2X Entrepreneurship pillar; IRIS+ PI7519</td></tr>
         <tr><td><strong>Women leadership</strong></td><td>≥30% senior/C-suite women OR female CEO</td><td>2X Leadership; IRIS+ OI7505</td></tr>
-        <tr><td><strong>Women employment</strong></td><td>≥50% women employees OR >30% in mid-senior roles</td><td>2X Employment; IRIS+ PI4439</td></tr>
+        <tr><td><strong>Women employment</strong></td><td>≥50% women employees OR &gt;30% in mid-senior roles</td><td>2X Employment; IRIS+ PI4439</td></tr>
         <tr><td><strong>Products/services for women</strong></td><td>Core product/service designed for women customers</td><td>2X Consumption; IFC gender finance</td></tr>
         <tr><td><strong>Social exclusion criteria</strong></td><td>Displaced persons, ethnic minorities, disability-led, informal workers (≥40% workforce)</td><td>GIIN DEI framework; IRIS+ SP9935</td></tr>
         <tr><td><strong>Crisis-affected context</strong></td><td>Operating in IDA/fragile state, conflict zone, or post-disaster area</td><td>IFC fragile markets; GIIN COIN</td></tr>
@@ -179,11 +213,12 @@ table.data-tbl tr:last-child td{border-bottom:none}
   </div>
 </div>
 
+<!-- PIPELINE -->
 <div id="tab-pipeline" class="section">
   <div class="section-intro">Pipeline development for gender-lens and inclusion investing requires proactive, community-rooted sourcing. Women-led and socially excluded SMEs are systematically underrepresented in standard referral networks. This section covers sourcing, marketing materials, and outreach checklists.</div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-map-search" aria-hidden="true" style="color:#534AB7"></i></div><div class="card-title">Pipeline sourcing channels</div></div>
+    <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-map-search" aria-hidden="true" style="color:#534AB7;font-size:20px"></i></div><div><div class="card-title">Pipeline sourcing channels</div><div class="card-sub">Filter by channel type</div></div></div>
     <div id="channelFilter" class="pill-row">
       <div class="pill active" onclick="filterChannels('all',this)">All</div>
       <div class="pill" onclick="filterChannels('gov',this)">Government &amp; DFI</div>
@@ -191,27 +226,27 @@ table.data-tbl tr:last-child td{border-bottom:none}
       <div class="pill" onclick="filterChannels('community',this)">Community</div>
       <div class="pill" onclick="filterChannels('digital',this)">Digital</div>
     </div>
-    <table class="data-tbl" style="margin-top:.75rem">
+    <table class="data-tbl" style="margin-top:1rem">
       <thead><tr><th>Channel</th><th>Type</th><th>Gender/inclusion value</th><th>Crisis context?</th></tr></thead>
       <tbody id="channelTable">
-        <tr data-cat="gov"><td>Women's business associations (e.g. AWCCI, FKE Women)</td><td>gov</td><td>Direct reach to women entrepreneurs</td><td>✓ Often operational in crises</td></tr>
-        <tr data-cat="community"><td>Savings groups / VSLAs / ROSCAs</td><td>community</td><td>Reaches informal, unbanked women</td><td>✓ Highly relevant</td></tr>
-        <tr data-cat="gov"><td>DFI / development bank co-lending windows</td><td>gov</td><td>Blended finance for underserved markets</td><td>✓ Crisis facilities available</td></tr>
-        <tr data-cat="market"><td>Industry associations in female-dominant sectors (textiles, care, food)</td><td>market</td><td>Sector-specific pipeline</td><td>Partial</td></tr>
-        <tr data-cat="digital"><td>Women-focused fintech and digital lending platforms</td><td>digital</td><td>Reaches mobile-first women SMEs</td><td>✓ Low-infrastructure</td></tr>
-        <tr data-cat="community"><td>Community health workers / cooperatives</td><td>community</td><td>Trusted intermediaries for excluded groups</td><td>✓ Essential in conflict zones</td></tr>
-        <tr data-cat="market"><td>E-commerce platform seller data (with consent)</td><td>digital</td><td>Identifies women digital entrepreneurs</td><td>Partial</td></tr>
-        <tr data-cat="gov"><td>Refugee / IDP registration databases (UNHCR, WFP)</td><td>gov</td><td>Reaches displaced entrepreneurs</td><td>✓ Critical</td></tr>
-        <tr data-cat="digital"><td>Mobile money providers (M-Pesa, bKash, Wave)</td><td>digital</td><td>Identifies women with transaction history</td><td>✓</td></tr>
-        <tr data-cat="community"><td>Faith-based organisations and women's groups</td><td>community</td><td>Trust-building in traditional societies</td><td>✓</td></tr>
+        <tr data-cat="gov"><td>Women's business associations (e.g. AWCCI, FKE Women)</td><td>Gov</td><td>Direct reach to women entrepreneurs</td><td>✓ Often operational in crises</td></tr>
+        <tr data-cat="community"><td>Savings groups / VSLAs / ROSCAs</td><td>Community</td><td>Reaches informal, unbanked women</td><td>✓ Highly relevant</td></tr>
+        <tr data-cat="gov"><td>DFI / development bank co-lending windows</td><td>Gov</td><td>Blended finance for underserved markets</td><td>✓ Crisis facilities available</td></tr>
+        <tr data-cat="market"><td>Industry associations in female-dominant sectors (textiles, care, food)</td><td>Market</td><td>Sector-specific pipeline</td><td>Partial</td></tr>
+        <tr data-cat="digital"><td>Women-focused fintech and digital lending platforms</td><td>Digital</td><td>Reaches mobile-first women SMEs</td><td>✓ Low-infrastructure</td></tr>
+        <tr data-cat="community"><td>Community health workers / cooperatives</td><td>Community</td><td>Trusted intermediaries for excluded groups</td><td>✓ Essential in conflict zones</td></tr>
+        <tr data-cat="market"><td>E-commerce platform seller data (with consent)</td><td>Digital</td><td>Identifies women digital entrepreneurs</td><td>Partial</td></tr>
+        <tr data-cat="gov"><td>Refugee / IDP registration databases (UNHCR, WFP)</td><td>Gov</td><td>Reaches displaced entrepreneurs</td><td>✓ Critical</td></tr>
+        <tr data-cat="digital"><td>Mobile money providers (M-Pesa, bKash, Wave)</td><td>Digital</td><td>Identifies women with transaction history</td><td>✓</td></tr>
+        <tr data-cat="community"><td>Faith-based organisations and women's groups</td><td>Community</td><td>Trust-building in traditional societies</td><td>✓</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="grid2">
     <div class="card">
-      <div class="card-header"><div class="icon-wrap bg-coral"><i class="ti ti-speakerphone" aria-hidden="true" style="color:#993C1D"></i></div><div class="card-title">Marketing &amp; outreach checklist</div></div>
-      <ul class="checklist" id="mktChk">
+      <div class="card-header"><div class="icon-wrap bg-coral"><i class="ti ti-speakerphone" aria-hidden="true" style="color:#993C1D;font-size:20px"></i></div><div class="card-title">Marketing &amp; outreach checklist</div></div>
+      <ul class="checklist">
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Use images and language that reflect target clients (women, minority groups, persons with disability) in all materials</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Translate key materials into local languages and dialects</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Offer radio and WhatsApp outreach — not just print or branch visits</span></li>
@@ -225,34 +260,35 @@ table.data-tbl tr:last-child td{border-bottom:none}
       </ul>
     </div>
     <div class="card">
-      <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-alert-circle" aria-hidden="true" style="color:#854F0B"></i></div><div class="card-title">Common pipeline barriers to fix</div></div>
-      <div class="alert alert-amber">These barriers systematically exclude women and marginalised groups from ever entering your pipeline. Address them before marketing.</div>
+      <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-alert-circle" aria-hidden="true" style="color:#854F0B;font-size:20px"></i></div><div class="card-title">Common pipeline barriers to fix</div></div>
+      <div class="alert alert-amber" style="margin-bottom:10px">These barriers systematically exclude women and marginalised groups from ever entering your pipeline. Address them before marketing.</div>
       <ul class="checklist">
-        <li><div style="width:18px;flex-shrink:0;color:#BA7517;font-size:16px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Collateral requirements</strong> — Women often lack land titles or formal assets. Use moveable assets, guarantees, or group liability instead.</span></li>
-        <li><div style="width:18px;flex-shrink:0;color:#BA7517;font-size:16px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Formal registration bias</strong> — Many women-led SMEs are unregistered. Accept alternate proof: supplier contracts, mobile money history, community references.</span></li>
-        <li><div style="width:18px;flex-shrink:0;color:#BA7517;font-size:16px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Credit history gaps</strong> — Women have shorter or absent credit histories. Use cash flow-based or psychometric credit assessment.</span></li>
-        <li><div style="width:18px;flex-shrink:0;color:#BA7517;font-size:16px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Spousal consent requirements</strong> — These are discriminatory in many contexts. Review local law; default to individual consent wherever possible.</span></li>
-        <li><div style="width:18px;flex-shrink:0;color:#BA7517;font-size:16px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Branch / city-centric operations</strong> — Use mobile officers, agents, and digital channels to reach peri-urban and rural entrepreneurs.</span></li>
+        <li><div style="width:20px;flex-shrink:0;color:#BA7517;font-size:17px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Collateral requirements</strong> — Women often lack land titles or formal assets. Use moveable assets, guarantees, or group liability instead.</span></li>
+        <li><div style="width:20px;flex-shrink:0;color:#BA7517;font-size:17px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Formal registration bias</strong> — Many women-led SMEs are unregistered. Accept alternate proof: supplier contracts, mobile money history, community references.</span></li>
+        <li><div style="width:20px;flex-shrink:0;color:#BA7517;font-size:17px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Credit history gaps</strong> — Women have shorter or absent credit histories. Use cash flow-based or psychometric credit assessment.</span></li>
+        <li><div style="width:20px;flex-shrink:0;color:#BA7517;font-size:17px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Spousal consent requirements</strong> — These are discriminatory in many contexts. Review local law; default to individual consent wherever possible.</span></li>
+        <li><div style="width:20px;flex-shrink:0;color:#BA7517;font-size:17px"><i class="ti ti-x" aria-hidden="true"></i></div><span><strong>Branch / city-centric operations</strong> — Use mobile officers, agents, and digital channels to reach peri-urban and rural entrepreneurs.</span></li>
       </ul>
     </div>
   </div>
 </div>
 
+<!-- LOAN DESIGN -->
 <div id="tab-design" class="section">
   <div class="section-intro">Gender-smart loan and investment product design removes structural barriers and builds in features that respond to women's and excluded groups' actual financial lives — irregular income, mobility constraints, caregiving responsibilities, and lower tolerance for complex documentation.</div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-teal"><i class="ti ti-adjustments" aria-hidden="true" style="color:#0F6E56"></i></div><div class="card-title">Product design parameters</div><div class="card-sub">Adjust the interactive sliders to model your product</div></div>
+    <div class="card-header"><div class="icon-wrap bg-teal"><i class="ti ti-adjustments" aria-hidden="true" style="color:#0F6E56;font-size:20px"></i></div><div><div class="card-title">Product design parameters</div><div class="card-sub">Adjust the interactive sliders to model your product</div></div></div>
     <div class="range-row"><label>Loan size (min, USD)</label><input type="range" min="500" max="50000" step="500" value="2000" oninput="updR('lmin',this.value)"><span class="range-val" id="lmin">$2,000</span></div>
     <div class="range-row"><label>Loan size (max, USD)</label><input type="range" min="5000" max="250000" step="5000" value="50000" oninput="updR('lmax',this.value)"><span class="range-val" id="lmax">$50,000</span></div>
     <div class="range-row"><label>Max tenure (months)</label><input type="range" min="3" max="84" step="3" value="24" oninput="updR('tenure',this.value)"><span class="range-val" id="tenure">24 mo</span></div>
     <div class="range-row"><label>Grace period (months)</label><input type="range" min="0" max="12" step="1" value="3" oninput="updR('grace',this.value)"><span class="range-val" id="grace">3 mo</span></div>
-    <div id="designAlert" class="alert alert-teal" style="margin-top:.75rem">Grace period of 3 months — appropriate for seasonal businesses and post-crisis recovery clients.</div>
+    <div id="designAlert" class="alert alert-teal" style="margin-top:1rem">Grace period of 3 months — appropriate for seasonal businesses and post-crisis recovery clients.</div>
   </div>
 
   <div class="grid2">
     <div class="card">
-      <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-certificate" aria-hidden="true" style="color:#534AB7"></i></div><div class="card-title">Collateral alternatives (IFC-aligned)</div></div>
+      <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-certificate" aria-hidden="true" style="color:#534AB7;font-size:20px"></i></div><div class="card-title">Collateral alternatives (IFC-aligned)</div></div>
       <ul class="checklist">
         <li><div class="chk" onclick="toggleChk(this)"></div><span><strong>Moveable asset financing</strong> — Accept equipment, livestock, inventory as collateral where legal frameworks allow</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span><strong>Group / solidarity guarantee</strong> — Peer group co-guarantees; especially effective in savings group communities</span></li>
@@ -263,7 +299,7 @@ table.data-tbl tr:last-child td{border-bottom:none}
       </ul>
     </div>
     <div class="card">
-      <div class="card-header"><div class="icon-wrap bg-green"><i class="ti ti-coin" aria-hidden="true" style="color:#3B6D11"></i></div><div class="card-title">Pricing &amp; terms checklist</div></div>
+      <div class="card-header"><div class="icon-wrap bg-green"><i class="ti ti-coin" aria-hidden="true" style="color:#3B6D11;font-size:20px"></i></div><div class="card-title">Pricing &amp; terms checklist</div></div>
       <ul class="checklist">
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Offer interest rate incentive (0.5–2% reduction) for hitting gender/inclusion milestones (e.g. hiring women managers)</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Flexible repayment schedules aligned with seasonal or irregular cash flows</span></li>
@@ -277,8 +313,8 @@ table.data-tbl tr:last-child td{border-bottom:none}
   </div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-file-description" aria-hidden="true" style="color:#854F0B"></i></div><div class="card-title">Application materials — gender-smart design principles</div></div>
-    <div class="alert alert-blue">Application forms are a major exclusion point. Apply these principles to every form and process your team uses.</div>
+    <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-file-description" aria-hidden="true" style="color:#854F0B;font-size:20px"></i></div><div class="card-title">Application materials — gender-smart design principles</div></div>
+    <div class="alert alert-blue" style="margin-bottom:12px">Application forms are a major exclusion point. Apply these principles to every form and process your team uses.</div>
     <table class="data-tbl">
       <thead><tr><th>Standard practice</th><th>Gender-smart alternative</th><th>Framework basis</th></tr></thead>
       <tbody>
@@ -294,85 +330,85 @@ table.data-tbl tr:last-child td{border-bottom:none}
   </div>
 </div>
 
+<!-- APPRAISAL -->
 <div id="tab-appraisal" class="section">
   <div class="section-intro">Appraisal and selection procedures must be structured to overcome unconscious bias and institutional barriers. This section provides a step-by-step due diligence workflow, interview guide, and red-flag checklist aligned with IFC and GIIN standards.</div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-list-check" aria-hidden="true" style="color:#534AB7"></i></div><div class="card-title">Due diligence workflow — gender and social inclusion</div></div>
-    <div id="ddSteps">
-      <div style="margin-bottom:.5rem">
-        <button class="accordion-btn" onclick="toggleAcc('dd1')">1 · Business viability assessment <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
-        <div id="dd1" class="accordion-body open">
-          <p style="margin-bottom:6px">Assess the SME's core business model using a gender-informed lens. Key questions:</p>
-          <ul style="padding-left:16px;list-style:disc;line-height:2">
-            <li>What markets does the business serve, and are these accessible to women or excluded groups?</li>
-            <li>Does the business model depend on informal relationships that may not survive credit formalisation?</li>
-            <li>What is the owner's household situation — caregiving burden, mobility, decision-making autonomy?</li>
-            <li>Are sales seasonal? Map the repayment schedule against identified lean seasons.</li>
-            <li>Has the business survived a prior crisis, shock, or displacement event? What adaptive strategies were used?</li>
-          </ul>
-          <div class="alert alert-teal" style="margin-top:8px">IRIS+ indicators: OI7505 (gender of senior leadership), PI4439 (female employees), PI7519 (ownership structure)</div>
-        </div>
+    <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-list-check" aria-hidden="true" style="color:#534AB7;font-size:20px"></i></div><div class="card-title">Due diligence workflow — gender and social inclusion</div></div>
+    <div style="margin-bottom:.6rem">
+      <button class="accordion-btn" onclick="toggleAcc('dd1')">1 · Business viability assessment <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+      <div id="dd1" class="accordion-body open">
+        <p style="margin-bottom:8px;font-weight:600;color:#26215C">Assess the SME's core business model using a gender-informed lens. Key questions:</p>
+        <ul style="padding-left:18px;list-style:disc;line-height:2.1">
+          <li>What markets does the business serve, and are these accessible to women or excluded groups?</li>
+          <li>Does the business model depend on informal relationships that may not survive credit formalisation?</li>
+          <li>What is the owner's household situation — caregiving burden, mobility, decision-making autonomy?</li>
+          <li>Are sales seasonal? Map the repayment schedule against identified lean seasons.</li>
+          <li>Has the business survived a prior crisis, shock, or displacement event? What adaptive strategies were used?</li>
+        </ul>
+        <div class="alert alert-teal" style="margin-top:10px">IRIS+ indicators: OI7505 (gender of senior leadership), PI4439 (female employees), PI7519 (ownership structure)</div>
       </div>
-      <div style="margin-bottom:.5rem">
-        <button class="accordion-btn" onclick="toggleAcc('dd2')">2 · Financial analysis — adjusted for informality <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
-        <div id="dd2" class="accordion-body">
-          <ul style="padding-left:16px;list-style:disc;line-height:2">
-            <li>Reconstruct cash flows from mobile money, market stall sales, or supplier receipts if formal accounts absent</li>
-            <li>Use 12-month trailing analysis; do not penalise seasonal gaps in turnover</li>
-            <li>Adjust DSCR calculations to account for household income that may subsidise the business during lean periods</li>
-            <li>Do not use household asset ownership as a negative credit indicator if assets are held in husband's name due to customary law</li>
-            <li>For group lending: assess collective repayment capacity, not just individual member capacity</li>
-          </ul>
-          <div class="alert alert-amber" style="margin-top:8px">Bias check: Are you applying stricter standards to this applicant than you would to a male-led business with equivalent cash flows?</div>
-        </div>
+    </div>
+    <div style="margin-bottom:.6rem">
+      <button class="accordion-btn" onclick="toggleAcc('dd2')">2 · Financial analysis — adjusted for informality <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+      <div id="dd2" class="accordion-body">
+        <ul style="padding-left:18px;list-style:disc;line-height:2.1">
+          <li>Reconstruct cash flows from mobile money, market stall sales, or supplier receipts if formal accounts absent</li>
+          <li>Use 12-month trailing analysis; do not penalise seasonal gaps in turnover</li>
+          <li>Adjust DSCR calculations to account for household income that may subsidise the business during lean periods</li>
+          <li>Do not use household asset ownership as a negative credit indicator if assets are held in husband's name due to customary law</li>
+          <li>For group lending: assess collective repayment capacity, not just individual member capacity</li>
+        </ul>
+        <div class="alert alert-amber" style="margin-top:10px"><strong>Bias check:</strong> Are you applying stricter standards to this applicant than you would to a male-led business with equivalent cash flows?</div>
       </div>
-      <div style="margin-bottom:.5rem">
-        <button class="accordion-btn" onclick="toggleAcc('dd3')">3 · Social &amp; environmental assessment <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
-        <div id="dd3" class="accordion-body">
-          <ul style="padding-left:16px;list-style:disc;line-height:2">
-            <li>Review IFC Performance Standard 2: Labour and working conditions — does the business have adequate worker protections?</li>
-            <li>Screen for child labour, forced labour, or debt bondage (especially in supply chains)</li>
-            <li>Assess gender-based violence (GBV) risk: is the loan likely to increase the applicant's risk of partner violence? (e.g. if husband controls business assets)</li>
-            <li>Review environmental impact — does the business disproportionately harm women or marginalised communities nearby?</li>
-            <li>Apply GIIN COIN (Communities of Impact) lens for community-level effects</li>
-          </ul>
-        </div>
+    </div>
+    <div style="margin-bottom:.6rem">
+      <button class="accordion-btn" onclick="toggleAcc('dd3')">3 · Social &amp; environmental assessment <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+      <div id="dd3" class="accordion-body">
+        <ul style="padding-left:18px;list-style:disc;line-height:2.1">
+          <li>Review IFC Performance Standard 2: Labour and working conditions — does the business have adequate worker protections?</li>
+          <li>Screen for child labour, forced labour, or debt bondage (especially in supply chains)</li>
+          <li>Assess gender-based violence (GBV) risk: is the loan likely to increase the applicant's risk of partner violence?</li>
+          <li>Review environmental impact — does the business disproportionately harm women or marginalised communities nearby?</li>
+          <li>Apply GIIN COIN (Communities of Impact) lens for community-level effects</li>
+        </ul>
       </div>
-      <div style="margin-bottom:.5rem">
-        <button class="accordion-btn" onclick="toggleAcc('dd4')">4 · Management &amp; governance review <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
-        <div id="dd4" class="accordion-body">
-          <ul style="padding-left:16px;list-style:disc;line-height:2">
-            <li>For equity investments: map board composition against 2X Leadership criteria (≥30% women on board)</li>
-            <li>Assess whether the nominated borrower has genuine decision-making control over the business</li>
-            <li>Check for nominee structures that mask actual ownership (a male relative listed as co-owner)</li>
-            <li>For larger SMEs: review HR policies for gender pay equity, parental leave, anti-harassment</li>
-            <li>IRIS+ indicator: OI7505, OI5550 (women in senior management)</li>
-          </ul>
-        </div>
+    </div>
+    <div style="margin-bottom:.6rem">
+      <button class="accordion-btn" onclick="toggleAcc('dd4')">4 · Management &amp; governance review <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+      <div id="dd4" class="accordion-body">
+        <ul style="padding-left:18px;list-style:disc;line-height:2.1">
+          <li>For equity investments: map board composition against 2X Leadership criteria (≥30% women on board)</li>
+          <li>Assess whether the nominated borrower has genuine decision-making control over the business</li>
+          <li>Check for nominee structures that mask actual ownership (a male relative listed as co-owner)</li>
+          <li>For larger SMEs: review HR policies for gender pay equity, parental leave, anti-harassment</li>
+          <li>IRIS+ indicator: OI7505, OI5550 (women in senior management)</li>
+        </ul>
       </div>
-      <div>
-        <button class="accordion-btn" onclick="toggleAcc('dd5')">5 · Final credit decision — bias audit <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
-        <div id="dd5" class="accordion-body">
-          <ul style="padding-left:16px;list-style:disc;line-height:2">
-            <li>Run a structured bias audit: would this application have been assessed differently if the owner were male?</li>
-            <li>Require sign-off from a second officer if application is declined for a woman-led or minority-led SME</li>
-            <li>Document the specific reason for decline — track these reasons across the portfolio quarterly</li>
-            <li>If declined, offer a transparent feedback session and pathway to reapply (with TA support if needed)</li>
-            <li>Set a minimum portfolio target for gender-lens deals (recommend ≥40% of SME book) and track against it monthly</li>
-          </ul>
-          <div class="alert alert-coral" style="margin-top:8px">Red flag: If decline rate for women-led applications is more than 1.5x the rate for male-led applications with equivalent financials, review your appraisal criteria immediately.</div>
-        </div>
+    </div>
+    <div>
+      <button class="accordion-btn" onclick="toggleAcc('dd5')">5 · Final credit decision — bias audit <i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+      <div id="dd5" class="accordion-body">
+        <ul style="padding-left:18px;list-style:disc;line-height:2.1">
+          <li>Run a structured bias audit: would this application have been assessed differently if the owner were male?</li>
+          <li>Require sign-off from a second officer if application is declined for a woman-led or minority-led SME</li>
+          <li>Document the specific reason for decline — track these reasons across the portfolio quarterly</li>
+          <li>If declined, offer a transparent feedback session and pathway to reapply (with TA support if needed)</li>
+          <li>Set a minimum portfolio target for gender-lens deals (recommend ≥40% of SME book) and track against it monthly</li>
+        </ul>
+        <div class="alert alert-coral" style="margin-top:10px"><strong>Red flag:</strong> If decline rate for women-led applications is more than 1.5x the rate for male-led applications with equivalent financials, review your appraisal criteria immediately.</div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- PORTFOLIO -->
 <div id="tab-portfolio" class="section">
   <div class="section-intro">Portfolio management must track gender and social inclusion outcomes alongside financial performance. This section covers IRIS+-aligned KPIs, monitoring frequency, and escalation protocols for at-risk borrowers in fragile contexts.</div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-teal"><i class="ti ti-chart-area-line" aria-hidden="true" style="color:#0F6E56"></i></div><div class="card-title">Core portfolio KPIs — IRIS+ &amp; 2X aligned</div></div>
+    <div class="card-header"><div class="icon-wrap bg-teal"><i class="ti ti-chart-area-line" aria-hidden="true" style="color:#0F6E56;font-size:20px"></i></div><div class="card-title">Core portfolio KPIs — IRIS+ &amp; 2X aligned</div></div>
     <table class="data-tbl">
       <thead><tr><th>KPI</th><th>IRIS+ code</th><th>Target (recommended)</th><th>Frequency</th></tr></thead>
       <tbody>
@@ -392,20 +428,20 @@ table.data-tbl tr:last-child td{border-bottom:none}
 
   <div class="grid2">
     <div class="card">
-      <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-bell" aria-hidden="true" style="color:#854F0B"></i></div><div class="card-title">Early warning signals</div></div>
-      <div class="alert alert-amber">Women and excluded borrowers may signal distress differently. Do not rely solely on missed payments.</div>
+      <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-bell" aria-hidden="true" style="color:#854F0B;font-size:20px"></i></div><div class="card-title">Early warning signals</div></div>
+      <div class="alert alert-amber" style="margin-bottom:10px">Women and excluded borrowers may signal distress differently. Do not rely solely on missed payments.</div>
       <ul class="checklist">
-        <li><div style="width:18px;flex-shrink:0;font-size:15px;color:#BA7517">⚑</div><span>Client becomes unreachable or changes communication channel abruptly</span></li>
-        <li><div style="width:18px;flex-shrink:0;font-size:15px;color:#BA7517">⚑</div><span>Business operating hours or location changes unexpectedly</span></li>
-        <li><div style="width:18px;flex-shrink:0;font-size:15px;color:#BA7517">⚑</div><span>Third party (male relative) begins answering client's phone</span></li>
-        <li><div style="width:18px;flex-shrink:0;font-size:15px;color:#BA7517">⚑</div><span>Repayment amounts drop below contracted schedule</span></li>
-        <li><div style="width:18px;flex-shrink:0;font-size:15px;color:#BA7517">⚑</div><span>Client requests change of loan account holder name</span></li>
-        <li><div style="width:18px;flex-shrink:0;font-size:15px;color:#BA7517">⚑</div><span>Regional security or climate event in client's area</span></li>
-        <li><div style="width:18px;flex-shrink:0;font-size:15px;color:#BA7517">⚑</div><span>Key supplier or buyer relationship disrupted</span></li>
+        <li><div style="width:20px;flex-shrink:0;font-size:16px;color:#BA7517">⚑</div><span>Client becomes unreachable or changes communication channel abruptly</span></li>
+        <li><div style="width:20px;flex-shrink:0;font-size:16px;color:#BA7517">⚑</div><span>Business operating hours or location changes unexpectedly</span></li>
+        <li><div style="width:20px;flex-shrink:0;font-size:16px;color:#BA7517">⚑</div><span>Third party (male relative) begins answering client's phone</span></li>
+        <li><div style="width:20px;flex-shrink:0;font-size:16px;color:#BA7517">⚑</div><span>Repayment amounts drop below contracted schedule</span></li>
+        <li><div style="width:20px;flex-shrink:0;font-size:16px;color:#BA7517">⚑</div><span>Client requests change of loan account holder name</span></li>
+        <li><div style="width:20px;flex-shrink:0;font-size:16px;color:#BA7517">⚑</div><span>Regional security or climate event in client's area</span></li>
+        <li><div style="width:20px;flex-shrink:0;font-size:16px;color:#BA7517">⚑</div><span>Key supplier or buyer relationship disrupted</span></li>
       </ul>
     </div>
     <div class="card">
-      <div class="card-header"><div class="icon-wrap bg-coral"><i class="ti ti-lifebuoy" aria-hidden="true" style="color:#993C1D"></i></div><div class="card-title">At-risk client response protocol</div></div>
+      <div class="card-header"><div class="icon-wrap bg-coral"><i class="ti ti-lifebuoy" aria-hidden="true" style="color:#993C1D;font-size:20px"></i></div><div class="card-title">At-risk client response protocol</div></div>
       <ul class="checklist">
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Trigger outreach within 5 days of missed payment or warning signal — use preferred channel</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Offer payment holiday (1–3 months) before escalating to recovery — especially in crisis contexts</span></li>
@@ -419,11 +455,12 @@ table.data-tbl tr:last-child td{border-bottom:none}
   </div>
 </div>
 
+<!-- TECH ASSISTANCE -->
 <div id="tab-ta" class="section">
   <div class="section-intro">Technical assistance (TA) is not a "nice to have" for gender-lens portfolios — it is a return-enhancing, risk-reducing investment. This section outlines how to design, source, and deliver TA that genuinely serves women-led and socially excluded SMEs.</div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-green"><i class="ti ti-school" aria-hidden="true" style="color:#3B6D11"></i></div><div class="card-title">TA design principles</div></div>
+    <div class="card-header"><div class="icon-wrap bg-green"><i class="ti ti-school" aria-hidden="true" style="color:#3B6D11;font-size:20px"></i></div><div class="card-title">TA design principles</div></div>
     <div class="grid2">
       <div class="alert alert-teal"><strong>Demand-led:</strong> Ask clients what they need. Do not impose standardised training curricula. Use a needs assessment at onboarding and at each annual review.</div>
       <div class="alert alert-blue"><strong>Integrated, not siloed:</strong> TA should be embedded in the lending relationship, not handed off to a separate NGO with no coordination. Assign a TA contact to each loan officer.</div>
@@ -433,24 +470,24 @@ table.data-tbl tr:last-child td{border-bottom:none}
   </div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-tools" aria-hidden="true" style="color:#534AB7"></i></div><div class="card-title">TA menu by client need</div></div>
+    <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-tools" aria-hidden="true" style="color:#534AB7;font-size:20px"></i></div><div class="card-title">TA menu by client need</div></div>
     <table class="data-tbl">
       <thead><tr><th>Client need</th><th>TA type</th><th>Delivery mode</th><th>Typical provider</th></tr></thead>
       <tbody>
-        <tr><td>Financial literacy &amp; bookkeeping</td><td>Training</td><td>In-person, peer group, app</td><td>MFI, fintech, NGO</td></tr>
-        <tr><td>Market access &amp; buyer linkages</td><td>Market linkage facilitation</td><td>Trade fair, platform onboarding</td><td>Chamber of commerce, DFI facility</td></tr>
-        <tr><td>Digital commerce (e-commerce, mobile payments)</td><td>Digital skills</td><td>Mobile / WhatsApp training</td><td>Tech partner, platform provider</td></tr>
-        <tr><td>Business formalisation &amp; registration</td><td>Advisory</td><td>1:1 or group; agent network</td><td>Legal clinic, business development service</td></tr>
-        <tr><td>Gender &amp; negotiation skills</td><td>Leadership coaching</td><td>Peer circles, mentoring</td><td>Women's business association, WEPs partner</td></tr>
-        <tr><td>Climate / disaster resilience</td><td>Advisory + insurance linkage</td><td>Workshop + product referral</td><td>MCII, index insurance provider</td></tr>
-        <tr><td>Export readiness</td><td>Trade facilitation</td><td>Group training + compliance support</td><td>ITC SheTrades, trade ministry</td></tr>
-        <tr><td>Mental health &amp; GBV support</td><td>Psychosocial referral</td><td>Confidential referral pathway</td><td>GBV service provider, UNHCR partner</td></tr>
+        <tr><td><strong>Financial literacy &amp; bookkeeping</strong></td><td>Training</td><td>In-person, peer group, app</td><td>MFI, fintech, NGO</td></tr>
+        <tr><td><strong>Market access &amp; buyer linkages</strong></td><td>Market linkage facilitation</td><td>Trade fair, platform onboarding</td><td>Chamber of commerce, DFI facility</td></tr>
+        <tr><td><strong>Digital commerce (e-commerce, mobile payments)</strong></td><td>Digital skills</td><td>Mobile / WhatsApp training</td><td>Tech partner, platform provider</td></tr>
+        <tr><td><strong>Business formalisation &amp; registration</strong></td><td>Advisory</td><td>1:1 or group; agent network</td><td>Legal clinic, business development service</td></tr>
+        <tr><td><strong>Gender &amp; negotiation skills</strong></td><td>Leadership coaching</td><td>Peer circles, mentoring</td><td>Women's business association, WEPs partner</td></tr>
+        <tr><td><strong>Climate / disaster resilience</strong></td><td>Advisory + insurance linkage</td><td>Workshop + product referral</td><td>MCII, index insurance provider</td></tr>
+        <tr><td><strong>Export readiness</strong></td><td>Trade facilitation</td><td>Group training + compliance support</td><td>ITC SheTrades, trade ministry</td></tr>
+        <tr><td><strong>Mental health &amp; GBV support</strong></td><td>Psychosocial referral</td><td>Confidential referral pathway</td><td>GBV service provider, UNHCR partner</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-blue"><i class="ti ti-checkup-list" aria-hidden="true" style="color:#185FA5"></i></div><div class="card-title">TA onboarding checklist (at loan disbursement)</div></div>
+    <div class="card-header"><div class="icon-wrap bg-blue"><i class="ti ti-checkup-list" aria-hidden="true" style="color:#185FA5;font-size:20px"></i></div><div class="card-title">TA onboarding checklist (at loan disbursement)</div></div>
     <ul class="checklist">
       <li><div class="chk" onclick="toggleChk(this)"></div><span>Complete TA needs assessment form with client (not just loan officer's guess)</span></li>
       <li><div class="chk" onclick="toggleChk(this)"></div><span>Assign to at least one TA track; introduce to TA provider within 30 days of disbursement</span></li>
@@ -462,14 +499,15 @@ table.data-tbl tr:last-child td{border-bottom:none}
   </div>
 </div>
 
+<!-- SCORING -->
 <div id="tab-scoring" class="section">
   <div class="section-intro">Use this tool to score individual SME applicants across gender, social inclusion, financial, and impact dimensions. Scores draw on 2X Challenge criteria, IFC standards, and GIIN IRIS+ indicators.</div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-calculator" aria-hidden="true" style="color:#854F0B"></i></div><div class="card-title">Gender &amp; social inclusion scorecard</div></div>
+    <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-calculator" aria-hidden="true" style="color:#854F0B;font-size:20px"></i></div><div class="card-title">Gender &amp; social inclusion scorecard</div></div>
 
-    <div style="margin-bottom:1rem">
-      <div style="font-size:13px;font-weight:500;margin-bottom:6px">A · Ownership &amp; entrepreneurship</div>
+    <div style="margin-bottom:1.1rem">
+      <div class="dim-label">A · Ownership &amp; entrepreneurship</div>
       <div class="radio-group" id="r_own">
         <div class="radio-opt" onclick="setScore('own',0,this)">Male-led, no women owners</div>
         <div class="radio-opt" onclick="setScore('own',5,this)">Mixed ownership, &lt;30% women</div>
@@ -477,9 +515,8 @@ table.data-tbl tr:last-child td{border-bottom:none}
         <div class="radio-opt sel" onclick="setScore('own',15,this)">≥51% women ownership / sole woman proprietor</div>
       </div>
     </div>
-
-    <div style="margin-bottom:1rem">
-      <div style="font-size:13px;font-weight:500;margin-bottom:6px">B · Leadership (2X criterion: ≥30% women in senior roles)</div>
+    <div style="margin-bottom:1.1rem">
+      <div class="dim-label">B · Leadership (2X criterion: ≥30% women in senior roles)</div>
       <div class="radio-group" id="r_lead">
         <div class="radio-opt" onclick="setScore('lead',0,this)">No women in management</div>
         <div class="radio-opt" onclick="setScore('lead',5,this)">&lt;30% women in management</div>
@@ -487,9 +524,8 @@ table.data-tbl tr:last-child td{border-bottom:none}
         <div class="radio-opt" onclick="setScore('lead',15,this)">Female CEO + ≥30% board</div>
       </div>
     </div>
-
-    <div style="margin-bottom:1rem">
-      <div style="font-size:13px;font-weight:500;margin-bottom:6px">C · Employment quality for women</div>
+    <div style="margin-bottom:1.1rem">
+      <div class="dim-label">C · Employment quality for women</div>
       <div class="radio-group" id="r_emp">
         <div class="radio-opt" onclick="setScore('emp',0,this)">No women employees</div>
         <div class="radio-opt" onclick="setScore('emp',5,this)">&lt;30% women workforce</div>
@@ -497,9 +533,8 @@ table.data-tbl tr:last-child td{border-bottom:none}
         <div class="radio-opt sel" onclick="setScore('emp',15,this)">≥50% women + decent work conditions</div>
       </div>
     </div>
-
-    <div style="margin-bottom:1rem">
-      <div style="font-size:13px;font-weight:500;margin-bottom:6px">D · Social inclusion dimension</div>
+    <div style="margin-bottom:1.1rem">
+      <div class="dim-label">D · Social inclusion dimension</div>
       <div class="radio-group" id="r_soc">
         <div class="radio-opt" onclick="setScore('soc',0,this)">No excluded group representation</div>
         <div class="radio-opt" onclick="setScore('soc',5,this)">Serves excluded communities as customers</div>
@@ -507,9 +542,8 @@ table.data-tbl tr:last-child td{border-bottom:none}
         <div class="radio-opt sel" onclick="setScore('soc',15,this)">Displaced/minority/disability-led AND crisis-context</div>
       </div>
     </div>
-
-    <div style="margin-bottom:1rem">
-      <div style="font-size:13px;font-weight:500;margin-bottom:6px">E · Products or services that benefit women / excluded groups</div>
+    <div style="margin-bottom:1.1rem">
+      <div class="dim-label">E · Products or services that benefit women / excluded groups</div>
       <div class="radio-group" id="r_prod">
         <div class="radio-opt" onclick="setScore('prod',0,this)">No gender/inclusion nexus</div>
         <div class="radio-opt" onclick="setScore('prod',5,this)">Incidentally serves women</div>
@@ -517,9 +551,8 @@ table.data-tbl tr:last-child td{border-bottom:none}
         <div class="radio-opt" onclick="setScore('prod',15,this)">Core product transformatively addresses exclusion barrier</div>
       </div>
     </div>
-
-    <div style="margin-bottom:1rem">
-      <div style="font-size:13px;font-weight:500;margin-bottom:6px">F · Financial profile &amp; creditworthiness</div>
+    <div style="margin-bottom:1.1rem">
+      <div class="dim-label">F · Financial profile &amp; creditworthiness</div>
       <div class="radio-group" id="r_fin">
         <div class="radio-opt" onclick="setScore('fin',0,this)">No financial records</div>
         <div class="radio-opt" onclick="setScore('fin',5,this)">Informal records only</div>
@@ -528,26 +561,23 @@ table.data-tbl tr:last-child td{border-bottom:none}
       </div>
     </div>
 
-    <div style="border-top:0.5px solid var(--color-border-secondary);padding-top:1rem;margin-top:.5rem">
+    <div style="border-top:2px solid #EEEDFE;padding-top:1.25rem;margin-top:.5rem">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem">
-        <div style="font-size:15px;font-weight:500">Total score</div>
-        <div style="font-size:22px;font-weight:500" id="totalScore">70 / 90</div>
+        <div style="font-size:16px;font-weight:700;color:#26215C">Total score</div>
+        <div style="font-size:26px;font-weight:700;color:#26215C" id="totalScore">70 / 90</div>
       </div>
       <div class="score-bar"><div class="score-fill" id="scoreFill" style="width:78%;background:#1D9E75"></div></div>
       <div id="scoreVerdict" class="alert alert-teal" style="margin-top:.75rem">Strong gender-lens candidate · Meets 2X threshold · Recommended for approval with standard TA onboarding</div>
-      <div style="margin-top:.75rem;display:flex;gap:8px;flex-wrap:wrap">
-        <button onclick="sendPrompt('Help me interpret this gender-lens score and suggest next steps for this SME applicant')">Interpret this score ↗</button>
-        <button onclick="sendPrompt('What TA should I offer a women-led SME scoring 70/90 in a crisis-affected market?')">Suggest TA package ↗</button>
-      </div>
     </div>
   </div>
 </div>
 
+<!-- CRISIS -->
 <div id="tab-crisis" class="section">
   <div class="section-intro">Crisis-affected and fragile contexts require specific adaptations across every stage of the investment lifecycle. Women and excluded groups face compounded vulnerability during conflict, displacement, climate shocks, and economic crises. This section provides a contextual adaptation layer.</div>
 
   <div class="card">
-    <div class="card-header"><div class="icon-wrap bg-coral"><i class="ti ti-alert-triangle" aria-hidden="true" style="color:#993C1D"></i></div><div class="card-title">Context assessment — select your operating environment</div></div>
+    <div class="card-header"><div class="icon-wrap bg-coral"><i class="ti ti-alert-triangle" aria-hidden="true" style="color:#993C1D;font-size:20px"></i></div><div><div class="card-title">Context assessment</div><div class="card-sub">Select your operating environment to filter relevant guidance</div></div></div>
     <div id="crisisFilter" class="pill-row">
       <div class="pill active" onclick="filterCrisis('all',this)">All contexts</div>
       <div class="pill" onclick="filterCrisis('conflict',this)">Conflict / FCV</div>
@@ -559,7 +589,7 @@ table.data-tbl tr:last-child td{border-bottom:none}
 
   <div id="crisisAdaptations">
     <div class="card" data-ctx="conflict climate displacement economic">
-      <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-shield" aria-hidden="true" style="color:#854F0B"></i></div><div class="card-title">Do no harm — baseline requirement in all crisis contexts</div></div>
+      <div class="card-header"><div class="icon-wrap bg-amber"><i class="ti ti-shield" aria-hidden="true" style="color:#854F0B;font-size:20px"></i></div><div class="card-title">Do no harm — baseline requirement in all crisis contexts</div></div>
       <ul class="checklist">
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Assess whether loan disbursement could increase GBV risk (e.g. if male household members control finances)</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Disburse to client's own mobile money or individual account — not joint or male-named account</span></li>
@@ -569,7 +599,7 @@ table.data-tbl tr:last-child td{border-bottom:none}
       </ul>
     </div>
     <div class="card" data-ctx="conflict displacement">
-      <div class="card-header"><div class="icon-wrap bg-coral"><i class="ti ti-sword" aria-hidden="true" style="color:#993C1D"></i></div><div class="card-title">Conflict / FCV context adaptations</div></div>
+      <div class="card-header"><div class="icon-wrap bg-coral"><i class="ti ti-sword" aria-hidden="true" style="color:#993C1D;font-size:20px"></i></div><div class="card-title">Conflict / FCV context adaptations</div></div>
       <table class="data-tbl">
         <thead><tr><th>Standard process</th><th>Conflict-adapted alternative</th></tr></thead>
         <tbody>
@@ -583,8 +613,8 @@ table.data-tbl tr:last-child td{border-bottom:none}
       </table>
     </div>
     <div class="card" data-ctx="displacement">
-      <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-home-off" aria-hidden="true" style="color:#534AB7"></i></div><div class="card-title">Displacement &amp; refugee context</div></div>
-      <div class="alert alert-blue" style="margin-bottom:.75rem">Key principle (UNHCR / IFC): Refugees and IDPs have the right to financial services. Legal right to work is the key variable — check national law before building product.</div>
+      <div class="card-header"><div class="icon-wrap bg-purple"><i class="ti ti-home-off" aria-hidden="true" style="color:#534AB7;font-size:20px"></i></div><div class="card-title">Displacement &amp; refugee context</div></div>
+      <div class="alert alert-blue" style="margin-bottom:.75rem"><strong>Key principle (UNHCR / IFC):</strong> Refugees and IDPs have the right to financial services. Legal right to work is the key variable — check national law before building product.</div>
       <ul class="checklist">
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Verify legal right to work and operate a business for the target client population</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Accept UNHCR registration card or national ID equivalent as KYC document</span></li>
@@ -595,7 +625,7 @@ table.data-tbl tr:last-child td{border-bottom:none}
       </ul>
     </div>
     <div class="card" data-ctx="climate">
-      <div class="card-header"><div class="icon-wrap bg-green"><i class="ti ti-plant" aria-hidden="true" style="color:#3B6D11"></i></div><div class="card-title">Climate shock adaptations</div></div>
+      <div class="card-header"><div class="icon-wrap bg-green"><i class="ti ti-plant" aria-hidden="true" style="color:#3B6D11;font-size:20px"></i></div><div class="card-title">Climate shock adaptations</div></div>
       <ul class="checklist">
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Map portfolio to climate risk zones; flag clients in flood, drought, or cyclone-prone areas for enhanced monitoring</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Offer automatic payment moratorium triggered by parametric climate event (index-based)</span></li>
@@ -605,7 +635,7 @@ table.data-tbl tr:last-child td{border-bottom:none}
       </ul>
     </div>
     <div class="card" data-ctx="economic">
-      <div class="card-header"><div class="icon-wrap bg-blue"><i class="ti ti-trending-down" aria-hidden="true" style="color:#185FA5"></i></div><div class="card-title">Economic crisis / macro shock adaptations</div></div>
+      <div class="card-header"><div class="icon-wrap bg-blue"><i class="ti ti-trending-down" aria-hidden="true" style="color:#185FA5;font-size:20px"></i></div><div class="card-title">Economic crisis / macro shock adaptations</div></div>
       <ul class="checklist">
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Activate portfolio-wide payment holiday review for women and excluded-group borrowers first</span></li>
         <li><div class="chk" onclick="toggleChk(this)"></div><span>Adjust loan pricing to reflect currency devaluation impact on real repayment burden</span></li>
@@ -655,8 +685,7 @@ function setScore(dim,val,el){
   else{fill.style.background='#993C1D';v.className='alert alert-coral';v.textContent='Below gender-lens threshold · Does not meet 2X criteria · Consider pipeline development support before lending, or refer to TA track first';}
 }
 function toggleAcc(id){
-  var el=document.getElementById(id);
-  el.classList.toggle('open');
+  document.getElementById(id).classList.toggle('open');
 }
 function filterChannels(cat,el){
   document.querySelectorAll('#channelFilter .pill').forEach(p=>p.classList.remove('active'));
@@ -674,3 +703,5 @@ function filterCrisis(ctx,el){
   });
 }
 </script>
+</body>
+</html>
